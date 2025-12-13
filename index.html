@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="light">
+
+    
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+    
+    <header>
+        <h1 class="fade-scroll">My Portfolio</h1>
+
+        
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button id="mode-toggle">🌙</button>
+    </header>
+
+    
+    <div class="social-bar">
+    <a href="https://www.facebook.com/markvincent.bigyan" class="icon" target="_blank">
+        <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com/_markiyyy0?igsh=MXJ2bjA5Zm9ocXVoMA==" class="icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=markvincent050307@gmail.com" class="icon">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+
+
+    
+    <section id="home" class="hero fade-scroll">
+        <img src="profile3.jpg" class="profile" alt="Profile">
+        <h2><span id="typing"></span></h2>
+        <p>Welcome to my portfolio!</p>
+        <a href="resume.pdf" download class="resume-btn">📄 Download My Resume</a>
+    </section>
+
+     <section id="about" class="fade-scroll">
+        <h2>About Me</h2>
+        <p>
+            Hi I'm Mark Vincent M. Bigyan,I'm 18 years old a BSINFO Student in LAGUNA STATE POLYTECHIC UNIVERSITY.I like making websites since i was in junior high my first interaction with making a website is when my uncle visits us on our house and I saw him making something in the middle of the night I ask him what he is doing then he shows me what he is doing at that time since then I idolize him on making websites,currently he is workin on Mark Villar as a web designer. Also I like matcha and coffee I'm always in a coffee shop I like drinking matcha while coding
+            because it gives me a peace of mind and gives me a boost in thinking I can easily think an idea about a design for a website.
+<br>
+<br>
+Beyond coding, I also have a strong interest in graphic design, which allows me to craft visuals that complement my web projects and enhance the overall user experience. My goal is to become a skilled and reliable front-end developer who can build accurate, efficient, and professional-quality websites for clients while continuing to learn and adapt to the latest trends and technologies in the industry. I am motivated by challenges, love solving complex problems, and am committed to turning ideas into meaningful digital experiences that leave a lasting impact.
+        </p>
+    </section>
+
+    <section id="projects" class="fade-scroll">
+        <h2>My Projects</h2>
+
+        <div class="grid">
+
+            <article class="card fade-scroll"
+onclick="openModal(
+    'Portfolio Website',
+    'A modern portfolio site.',
+    'project1.png'
+                    )">
+                <h3>Portfolio Website</h3>
+                <p>A fully responsive personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, projects, and resume with interactive animations, smooth scrolling, 
+                    and a dark/light mode toggle. Designed to provide a clean, modern, and user-friendly experience for visitors.</p>
+            </article>
+
+            <article class="card fade-scroll" onclick="openModal(
+    'School System',
+    'A student information system.',
+    'project2.png'
+)">
+                <h3>School System</h3>
+                <p>A student management system designed to help organize class schedules, student information, and academic tasks efficiently. Built using HTML and CSS, it features a simple and
+                     intuitive interface that allows users to navigate easily and manage school-related data effectively.</p>
+            </article>
+
+        <article class="card fade-scroll" onclick="openModal(
+    'Arduino Project',
+    'Temp & humidity monitoring.',
+    'project3.jpg'
+        )">
+
+                <h3>Arduino Project</h3>
+                <p>A temperature and humidity monitoring system using Arduino and sensors. It collects real-time environmental data, displaying it for easy monitoring of classroom conditions. 
+                    This project demonstrates practical use of technology for data collection and analysis in everyday settings.</p>
+            </article>
+
+            <article class="card fade-scroll" onclick="openModal(
+    'Graphic Designs',
+    'Collection of posters & logos.',
+    'project4.jpg'
+            )">
+                <h3>Graphic Designs</h3>
+                <p>A collection of creative digital designs, including logos, posters, banners, and photo edits. Created using Canva and Photoshop, this project highlights my artistic skills
+                     and ability to produce visually appealing and professional-quality designs for various purposes.</p>
+            </article>
+
+        </div>
+    </section>
+
+    
+   <div id="project-modal" class="modal fade-scroll">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+
+        <img id="modal-img" src="" alt="Project Image" class="modal-img">
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+
+        <div class="modal-buttons">
+            <a id="modal-live" href="#" target="_blank" class="modal-btn">Live Demo</a>
+            <a id="modal-github" href="#" target="_blank" class="modal-btn">GitHub</a>
+        </div>
+    </div>
+</div>
+
+   
+<section id="gallery" class="fade-scroll">
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+        <img src="gallery1.jpg" alt="Gallery Image 1" onclick="openImage(this.src)">
+        <img src="gallery2.jpg" alt="Gallery Image 2" onclick="openImage(this.src)">
+        <img src="gallery3.jpg" alt="Gallery Image 3" onclick="openImage(this.src)">
+        <img src="gallery4.jpg" alt="Gallery Image 4" onclick="openImage(this.src)">
+        <img src="gallery5.jpg" alt="Gallery Image 5" onclick="openImage(this.src)">
+        <img src="gallery6.jpg" alt="Gallery Image 6" onclick="openImage(this.src)">
+        <img src="gallery7.jpg" alt="Gallery Image 7" onclick="openImage(this.src)">
+        <img src="gallery8.jpg" alt="Gallery Image 8" onclick="openImage(this.src)">
+    </div>
+</section>
+
+
+<section id="achievements" class="fade-scroll">
+    <h2>Achievements & Certifications</h2>
+
+    <div class="achievement-grid">
+
+        <div class="achievement-card" onclick="openImage('nc2.jpg')">
+            <div class="cert-img">
+                <img src="nc2.jpg" alt="NC II Certificate">
+            </div>
+            <h3>NC II Certificate</h3>
+            <p>National Certificate II in ICT.</p>
+        </div>
+
+        <div class="achievement-card" onclick="openImage('python-cert.jpg')">
+            <div class="cert-img">
+                <img src="python-cert.jpg" alt="Python Certificate">
+            </div>
+            <h3>Python Certificate</h3>
+            <p>Python Programming Certification.</p>
+        </div>
+
+        <div class="achievement-card" onclick="openImage('honors.jpg')">
+            <div class="cert-img">
+                <img src="honors.jpg" alt="Academic Honors">
+            </div>
+            <h3>Academic Honors</h3>
+            <p>Senior High School Honor Student.</p>
+        </div>
+
+             <div class="achievement-card" onclick="openImage('certi.jpg')">
+            <div class="cert-img">
+                <img src="certi.jpg" alt="Academic Honors">
+            </div>
+            <h3>Best Research Paper</h3>
+            <p>Reaserch Plenum, A leader.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<div id="image-modal" class="modal">
+    <span class="close" onclick="closeImage()">×</span>
+    <img id="full-image">
+</div>
+
+
+    <section id="Skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar"><div class="fill" style="--level: 95%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar"><div class="fill" style="--level: 90%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>Python</p>
+            <div class="bar"><div class="fill" style="--level: 70%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>Graphic Design</p>
+            <div class="bar"><div class="fill" style="--level: 95%"></div></div>
+        </div>
+</section>
+
+    
+
+    <section id="contact" class="fade-scroll">
+        <h2>Contact Me</h2>
+
+        <form action="https://docs.google.com/forms/d/17hwuuuH0_kCWgPjjz9JfQygBPziQ1Vi-V52PDXX3Jsc/formResponse" method="POST">
+            <input type="text" name="entry.123456" placeholder="Your Name" required>
+            <input type="email" name="entry.654321" placeholder="Your Email" required>
+            <textarea name="entry.999999" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="fade-scroll">
+        <p>© 2025 My Portfolio | BS INFO 1-A</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<div class="background-shapes">
+    <div class="floating-circle small" style="top:10%; left:20%; animation-delay: 0s;"></div>
+    <div class="floating-circle medium" style="top:30%; left:70%; animation-delay: 2s;"></div>
+    <div class="floating-circle large" style="top:60%; left:40%; animation-delay: 4s;"></div>
+    <div class="floating-circle small" style="top:80%; left:10%; animation-delay: 1s;"></div>
+    <div class="floating-circle medium" style="top:50%; left:80%; animation-delay: 3s;"></div>
+    <div class="floating-line" style="top:0%; left:15%; animation-delay: 0s;"></div>
+    <div class="floating-line" style="top:50%; left:50%; animation-delay: 5s;"></div>
+    <div class="floating-line" style="top:20%; left:75%; animation-delay: 2s;"></div>
+</div>
+
+</body>
+</html>
